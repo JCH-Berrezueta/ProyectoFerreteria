@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PresentacionCliente.VSecundary.VThird.VCar"
+             Title="VCar"
+             BackgroundColor="White">
+    <Grid>
+        <ScrollView>
+            <StackLayout>
+                <Label
+                Padding="10"
+                Text="Productos Seleccionados"
+                FontAttributes="Bold"
+                TextColor="Black"
+                FontSize="Title"
+                HorizontalTextAlignment="Center" />
+                <Image x:Name="misfotos"
+                   Source="iconocarrito.png"
+                   WidthRequest="100"
+                   HeightRequest="100"/>
+                <CollectionView ItemsSource="{Binding Items}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Padding="10" ColumnDefinitions="*, *">
+                                <Label Text="{Binding Name}" Grid.Column="0"/>
+                                <Label Text="{Binding Price}" Grid.Column="1" />
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </StackLayout>
+        </ScrollView>
+
+        <!-- Barra de navegación inferior -->
+        <StackLayout Orientation="Horizontal"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="End"
+                 BackgroundColor="#e5d599"
+                 HeightRequest="60"
+                 Padding="5">
+            <ImageButton Source="usuario.png" HorizontalOptions="CenterAndExpand" Clicked="UsarioVista_Clicked"/>
+            <ImageButton Source="categorias.png" HorizontalOptions="CenterAndExpand" Clicked="CategoriaVista_Clicked"/>
+            <ImageButton Source="carritodecompras.png" HorizontalOptions="CenterAndExpand" Clicked="CarritoVista_Clicked"/>
+            <ImageButton Source="archivarfactura.png" HorizontalOptions="CenterAndExpand" Clicked="FacturaVista_Clicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

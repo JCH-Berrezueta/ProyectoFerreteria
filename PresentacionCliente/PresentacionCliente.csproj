@@ -67,4 +67,22 @@
 	  <ProjectReference Include="..\CapaLogica\CapaLogica.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <MauiXaml Update="VSecundary\VLogin.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="VSecundary\VRegister.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="VSecundary\VThird\VCar.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="VSecundary\VThird\VTienda.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="VSecundary\VThird\VUsuary.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	</ItemGroup>
+
 </Project>

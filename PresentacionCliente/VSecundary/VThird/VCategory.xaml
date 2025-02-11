@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PresentacionCliente.VSecundary.VThird.VCategory"
+             Title="VCategory">
+    <!--<ContentPage.BindingContext>
+        <vm:MainViewModel>
+            <vm:MainViewModel.ProductService>
+                --><!-- Asegúrate de proporcionar la ruta de tu base de datos --><!--
+                <vm:ProductService DbPath="{Binding DatabasePath}" />
+            </vm:MainViewModel.ProductService>
+        </vm:MainViewModel>
+    </ContentPage.BindingContext>-->
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="18"/>
+                <Setter Property="VerticalTextAlignment" Value="Center"/>
+                <Setter Property="HorizontalTextAlignment" Value="Center"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid>
+        <!-- Header -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Horizontal" BackgroundColor="#029DAF" Padding="10" Grid.Row="0">
+            <Image Source="menu_icon.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="StartAndExpand"/>
+            <Label Text="Lorem" TextColor="White" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+            <Image Source="cart_icon.png" WidthRequest="30" HeightRequest="30" HorizontalOptions="EndAndExpand"/>
+        </StackLayout>
+
+        <!-- Content -->
+        <CollectionView ItemsSource="{Binding Products}" Grid.Row="1">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame CornerRadius="10" BorderColor="LightGray" Padding="10">
+                        <StackLayout>
+                            <Image Source="{Binding ImageSource}" WidthRequest="60" HeightRequest="60"/>
+                            <Label Text="{Binding Name}"/>
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Footer -->
+        <!-- Barra de navegación inferior -->
+        <StackLayout Orientation="Horizontal"
+         HorizontalOptions="FillAndExpand"
+         VerticalOptions="End"
+         BackgroundColor="#e5d599"
+         HeightRequest="60"
+         Padding="5">
+            <ImageButton Source="usuario.png" HorizontalOptions="CenterAndExpand" Clicked="UsarioVista_Clicked"/>
+            <ImageButton Source="categorias.png" HorizontalOptions="CenterAndExpand" Clicked="CategoriaVista_Clicked"/>
+            <ImageButton Source="carritodecompras.png" HorizontalOptions="CenterAndExpand" Clicked="CarritoVista_Clicked"/>
+            <ImageButton Source="archivarfactura.png" HorizontalOptions="CenterAndExpand" Clicked="FacturaVista_Clicked"/>
+        </StackLayout>
+    </Grid>
+</ContentPage>

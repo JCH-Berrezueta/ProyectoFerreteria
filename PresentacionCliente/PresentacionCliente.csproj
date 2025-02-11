@@ -77,6 +77,12 @@
 	  <MauiXaml Update="VSecundary\VThird\VCar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="VSecundary\VThird\VCategory.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="VSecundary\VThird\VFactura.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="VSecundary\VThird\VTienda.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

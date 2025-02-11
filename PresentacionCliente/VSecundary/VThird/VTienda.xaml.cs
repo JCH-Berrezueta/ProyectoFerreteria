@@ -1,3 +1,4 @@
+using productoLN=CapaLogica.Gestion.ProductoLN;
 namespace PresentacionCliente.VSecundary.VThird;
 
 public partial class VTienda : ContentPage
@@ -5,7 +6,7 @@ public partial class VTienda : ContentPage
 	public VTienda()
 	{
 		InitializeComponent();
-        ProductosCollectionView.ItemsSource = ProductoLN.listarVistaProductosLN();
+        ProductosCollectionView.ItemsSource = productoLN.listarVistaProductosLN();
     }
 
     private async void Button_Clicked(object sender, EventArgs e)

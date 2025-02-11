@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PresentacionAdmin
+namespace PresentacionAdmin.Empresa
 {
-    public partial class formulario : Form
+    public partial class frmEditEmpresa : Form
     {
-        public formulario()
+        public frmEditEmpresa()
         {
             InitializeComponent();
         }

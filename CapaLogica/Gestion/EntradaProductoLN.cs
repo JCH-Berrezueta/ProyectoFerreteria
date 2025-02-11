@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogica.Gestion
 {
-    internal class EntradaProductoLN
+    public class EntradaProductoLN
     {
     }
 }

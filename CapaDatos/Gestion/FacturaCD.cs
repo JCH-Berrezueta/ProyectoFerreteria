@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Gestion
 {
-    internal class FacturaCD
+    public class FacturaCD
     {
     }
 }

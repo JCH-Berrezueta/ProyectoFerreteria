@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CapaDatos.Gestion
+namespace CapaEntidades.Vistas
 {
-    public class ProveedorCD
+    public class VSalidaProducto
     {
     }
 }

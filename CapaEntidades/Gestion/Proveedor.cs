@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidades.Gestion
 {
-    internal class Proveedor
+    public class Proveedor
     {
     }
 }

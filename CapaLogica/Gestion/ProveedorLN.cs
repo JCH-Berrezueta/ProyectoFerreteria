@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogica.Gestion
 {
-    internal class ProveedorLN
+    public class ProveedorLN
     {
     }
 }

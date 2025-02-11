@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Seguridad
 {
-    internal class CuentaCD
+    public class CuentaCD
     {
     }
 }

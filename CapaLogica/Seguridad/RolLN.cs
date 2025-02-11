@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaLogica.Seguridad
 {
-    internal class RolLN
+    public class RolLN
     {
     }
 }

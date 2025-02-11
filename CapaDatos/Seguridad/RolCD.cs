@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Seguridad
 {
-    internal class RolCD
+    public class RolCD
     {
     }
 }

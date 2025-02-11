@@ -1,6 +1,10 @@
-﻿namespace PresentacionWeb.Controladores
+﻿using Microsoft.AspNetCore.Mvc;
+
+namespace PresentacionWeb.Controladores
 {
-    public class ClienteCTR
+    [Route("api/[controller]")]
+    [ApiController]
+    public class ClienteCTR : ControllerBase
     {
     }
 }

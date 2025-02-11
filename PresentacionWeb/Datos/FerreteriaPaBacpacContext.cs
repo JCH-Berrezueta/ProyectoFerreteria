@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Reflection.Emit;
+using CapaEntidades.Gestion;
 
 namespace PresentacionWeb.Datos;
 
-public class FerreteriaPaBacpacContext
+public partial class FerreteriaPaBacpacContext : DbContext
 {
     public FerreteriaPaBacpacContext()
     {
@@ -15,23 +16,23 @@ public class FerreteriaPaBacpacContext
     {
     }
 
-    public virtual DbSet<CategoriaProducto> CategoriaProductos { get; set; }
+    public virtual DbSet<CapaEntidades.Gestion.Categoria> CategoriaProductos { get; set; }
 
-    public virtual DbSet<Cliente> Clientes { get; set; }
-    public virtual DbSet<Cuenta> Cuenta { get; set; }
+    public virtual DbSet<CapaEntidades.Gestion.Cliente> Clientes { get; set; }
+    public virtual DbSet<CapaEntidades.Gestion.Cuenta> Cuenta { get; set; }
 
-    public virtual DbSet<DetalleFactura> DetalleFacturas { get; set; }
-    public virtual DbSet<Empresa> Empresas { get; set; }
+    public virtual DbSet<CapaEntidades.Gestion.DetalleFactura> DetalleFacturas { get; set; }
+    public virtual DbSet<CapaEntidades.Gestion.Empresa> Empresas { get; set; }
 
-    public virtual DbSet<EntradaProducto> EntradaProductos { get; set; }
-    public virtual DbSet<Factura> Facturas { get; set; }
+    public virtual DbSet<CapaEntidades.Gestion.EntradaProducto> EntradaProductos { get; set; }
+    public virtual DbSet<CapaEntidades.Gestion.Factura> Facturas { get; set; }
 
-    public virtual DbSet<Producto> Productos { get; set; }
+    public virtual DbSet<CapaEntidades.Gestion.Producto> Productos { get; set; }
 
-    public virtual DbSet<Proveedor> Proveedors { get; set; }
-    public virtual DbSet<Rol> Rols { get; set; }
+    public virtual DbSet<CapaEntidades.Gestion.Proveedor> Proveedors { get; set; }
+    public virtual DbSet<CapaEntidades.Gestion.Rol> Rols { get; set; }
 
-    public virtual DbSet<SalidaProducto> SalidaProductos { get; set; }
+    public virtual DbSet<CapaEntidades.Gestion.SalidaProducto> SalidaProductos { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -40,7 +41,7 @@ public class FerreteriaPaBacpacContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<CategoriaProducto>(entity =>
+        modelBuilder.Entity<CapaEntidades.Gestion.Categoria>(entity =>
         {
             entity.HasKey(e => e.IdCategoriaProducto).HasName("PK_Categoria");
 
@@ -55,7 +56,7 @@ public class FerreteriaPaBacpacContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<Cliente>(entity =>
+        modelBuilder.Entity<CapaEntidades.Gestion.Cliente>(entity =>
         {
             entity.HasKey(e => e.IdCliente).HasName("PK_Registro_Cliente");
 
@@ -81,7 +82,7 @@ public class FerreteriaPaBacpacContext
                 .HasConstraintName("FK_Registro_Cliente_Cuenta");
         });
 
-        modelBuilder.Entity<Cuenta>(entity =>
+        modelBuilder.Entity<CapaEntidades.Gestion.Cuenta>(entity =>
         {
             entity.HasKey(e => e.IdCuenta).HasName("PK_Cuenta_Cliente_1");
 
@@ -100,7 +101,7 @@ public class FerreteriaPaBacpacContext
                 .HasConstraintName("FK_Cuenta_Cliente_Rol");
         });
 
-        modelBuilder.Entity<DetalleFactura>(entity =>
+        modelBuilder.Entity<CapaEntidades.Gestion.DetalleFactura>(entity =>
         {
             entity.HasKey(e => e.IdDetalleFactura);
 
@@ -122,7 +123,7 @@ public class FerreteriaPaBacpacContext
                 .HasConstraintName("FK_DetalleFactura_Productos_Cliente");
         });
 
-        modelBuilder.Entity<Empresa>(entity =>
+        modelBuilder.Entity<CapaEntidades.Gestion.Empresa>(entity =>
         {
             entity.HasKey(e => e.IdEmpresa);
 
@@ -155,7 +156,7 @@ public class FerreteriaPaBacpacContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<EntradaProducto>(entity =>
+        modelBuilder.Entity<CapaEntidades.Gestion.EntradaProducto>(entity =>
         {
             entity.HasKey(e => e.IdEntradaProducto);
 
@@ -180,7 +181,7 @@ public class FerreteriaPaBacpacContext
                 .HasConstraintName("FK_EntradaProducto_Proveedor");
         });
 
-        modelBuilder.Entity<Factura>(entity =>
+        modelBuilder.Entity<CapaEntidades.Gestion.Factura>(entity =>
         {
             entity.HasKey(e => e.IdFactura);
 
@@ -199,7 +200,7 @@ public class FerreteriaPaBacpacContext
                 .HasConstraintName("FK_Factura_Registro_Cliente");
         });
 
-        modelBuilder.Entity<Producto>(entity =>
+        modelBuilder.Entity<CapaEntidades.Gestion.Producto>(entity =>
         {
             entity.HasKey(e => e.IdProducto).HasName("PK_Productos");
 
@@ -221,7 +222,7 @@ public class FerreteriaPaBacpacContext
                 .HasConstraintName("FK_Producto_CategoriaProducto1");
         });
 
-        modelBuilder.Entity<Proveedor>(entity =>
+        modelBuilder.Entity<CapaEntidades.Gestion.Proveedor>(entity =>
         {
             entity.HasKey(e => e.IdProveedor);
 
@@ -248,7 +249,7 @@ public class FerreteriaPaBacpacContext
                 .HasConstraintName("FK_Proveedor_Empresa");
         });
 
-        modelBuilder.Entity<Rol>(entity =>
+        modelBuilder.Entity<CapaEntidades.Gestion.Rol>(entity =>
         {
             entity.HasKey(e => e.IdRol);
 
@@ -260,7 +261,7 @@ public class FerreteriaPaBacpacContext
                 .IsUnicode(false);
         });
 
-        modelBuilder.Entity<SalidaProducto>(entity =>
+        modelBuilder.Entity<CapaEntidades.Gestion.SalidaProducto>(entity =>
         {
             entity.HasKey(e => e.IdSalidaProducto);
 
@@ -282,5 +283,8 @@ public class FerreteriaPaBacpacContext
         });
         OnModelCreatingPartial(modelBuilder);
     }
+
+
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
 }

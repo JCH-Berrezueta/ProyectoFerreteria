@@ -89,5 +89,14 @@
       <Name>CapaLogica</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Categoria\" />
+    <Folder Include="Cliente\" />
+    <Folder Include="Empresa\" />
+    <Folder Include="Factura\" />
+    <Folder Include="Login\" />
+    <Folder Include="Producto\" />
+    <Folder Include="Proveedor\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -6,6 +6,7 @@ using CapaEntidades.Gestion;
 
 
 
+
 namespace PresentacionWeb.Datos;
 
 public partial class FerreteriaPaBacpacContext : DbContext

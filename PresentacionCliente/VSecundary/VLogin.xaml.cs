@@ -1,4 +1,4 @@
-using clientes = CapaDatos.Seguridad.CuentaCD;
+//using clientes = CapaDatos.Seguridad.CuentaCD;
 namespace PresentacionCliente.VSecundary;
 
 public partial class VLogin : ContentPage

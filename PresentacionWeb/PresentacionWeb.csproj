@@ -20,8 +20,4 @@
     <ProjectReference Include="..\CapaLogica\CapaLogica.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Modelado\" />
-  </ItemGroup>
-
 </Project>

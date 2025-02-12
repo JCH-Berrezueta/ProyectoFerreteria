@@ -8,5 +8,16 @@ namespace CapaEntidades.Gestion
 {
     public class Rol
     {
+        private int idRol;
+        private string nombre;
+
+        public Rol(int idRol, string nombre)
+        {
+            IdRol = idRol;
+            Nombre = nombre;
+        }
+
+        public int IdRol { get => idRol; set => idRol = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
     }
 }

@@ -1,10 +1,9 @@
-﻿using ProyectoFerreteria.Datos;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using ProyectoFerreteria.Models;
 using CapaDatos;
 using CapaEntidades;
 using PresentacionWeb.Datos;
+
 namespace ProyectoFerreteria.Controladores
 {
     [Route("api/[controller]")]

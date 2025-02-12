@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection.Emit;
 using CapaEntidades.Gestion;
 
+
 namespace PresentacionWeb.Datos;
 
 public partial class FerreteriaPaBacpacContext : DbContext
@@ -43,7 +44,7 @@ public partial class FerreteriaPaBacpacContext : DbContext
     {
         modelBuilder.Entity<CapaEntidades.Gestion.Categoria>(entity =>
         {
-            entity.HasKey(e => e.IdCategoriaProducto).HasName("PK_Categoria");
+            entity.HasKey(e => e.IdCategoria).HasName("PK_Categoria");
 
             entity.ToTable("CategoriaProducto");
 

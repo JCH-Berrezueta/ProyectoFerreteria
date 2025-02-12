@@ -65,6 +65,12 @@ namespace CapaDatos
     partial void DeleteRol(Rol instance);
     #endregion
 		
+		public ConectorBDDataContext() : 
+				base(global::CapaDatos.Properties.Settings.Default.FerreteriaPAConnectionString, mappingSource)
+		{
+			OnCreated();
+		}
+		
 		public ConectorBDDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
